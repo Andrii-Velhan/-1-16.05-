@@ -1,4 +1,3 @@
-'use strict'
 
 const refs = {
     controls: document.querySelector('#tabs-1 [data-controls]'),
@@ -21,9 +20,9 @@ refs.controls.addEventListener('click', event => {
         currentActiveControlItem.classList.remove('controls__item--active');
 
         const paneId = currentActiveControlItem.getAttribute('href').slice(1);
-        const pane = refs.panes.querySelector(`#${paneId}`);
-        // console.log(paneId);
+        const pane = refs.panes.querySelector(`#${paneId}`);        
         pane.classList.remove('pane--active');
+        // console.log(paneId);
     }
 
     const controlItem = event.target;
